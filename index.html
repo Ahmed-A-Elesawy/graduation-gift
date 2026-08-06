@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Special Gift 🎓</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PASSWORD SCREEN -->
+  <div id="password-screen">
+    <div class="sparkles" id="sparkles"></div>
+    <div class="floating-petals">
+      <div class="petal" style="--delay:0s;--left:5%;--dur:8s;--size:1.2;"></div>
+      <div class="petal" style="--delay:1s;--left:12%;--dur:7s;--size:0.8;"></div>
+      <div class="petal" style="--delay:2s;--left:22%;--dur:9s;--size:1.0;"></div>
+      <div class="petal" style="--delay:0.5s;--left:35%;--dur:6s;--size:1.3;"></div>
+      <div class="petal" style="--delay:3s;--left:48%;--dur:8s;--size:0.9;"></div>
+      <div class="petal" style="--delay:1.5s;--left:58%;--dur:7s;--size:1.1;"></div>
+      <div class="petal" style="--delay:2.5s;--left:70%;--dur:9s;--size:0.7;"></div>
+      <div class="petal" style="--delay:0.8s;--left:80%;--dur:6s;--size:1.2;"></div>
+      <div class="petal" style="--delay:3.5s;--left:90%;--dur:8s;--size:1.0;"></div>
+      <div class="petal" style="--delay:1.2s;--left:95%;--dur:7s;--size:0.8;"></div>
+    </div>
+    <div class="lock-container" id="lock-container">
+      <div class="card-shine"></div>
+      <div class="lily-wrapper" id="lily-wrapper">
+        <div class="lily-flower" id="lily-flower">
+          <div class="lily-center"></div>
+          <div class="lily-petal petal-1"></div>
+          <div class="lily-petal petal-2"></div>
+          <div class="lily-petal petal-3"></div>
+          <div class="lily-petal petal-4"></div>
+          <div class="lily-petal petal-5"></div>
+          <div class="lily-petal petal-6"></div>
+        </div>
+        <div class="lily-glow"></div>
+      </div>
+      <h1 class="lock-title">Something Special<br/>Awaits You</h1>
+      <p class="lock-subtitle">Enter the password to bloom your gift 🌸</p>
+      <div class="input-wrapper" id="input-wrapper">
+        <div class="input-glow"></div>
+        <input type="password" id="password-input" placeholder="Enter password..." maxlength="20" autocomplete="off"/>
+        <button class="show-hide-btn" id="show-hide-btn">
+          <svg class="eye-icon" id="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <svg class="eye-icon hidden" id="eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+        </button>
+      </div>
+      <p class="error-msg" id="error-msg">That's not the secret word, try again 🌷</p>
+      <button class="unlock-btn" id="unlock-btn"><span class="btn-shine"></span><span class="btn-text">🌸 Bloom My Gift</span></button>
+      <p class="hint-text">Hint: Something only you would know 💕</p>
+    </div>
+  </div>
+
+
+  <!-- MAIN WEBSITE -->
+  <div id="main-content" class="hidden">
+
+    <!-- HERO SECTION -->
+    <section id="hero-section">
+      <div class="hero-bg-elements">
+        <div class="hero-sparkles" id="hero-sparkles"></div>
+        <div class="hero-floating-petals">
+          <div class="hero-petal" style="--delay:0s;--left:3%;--dur:10s;--size:1.0;"></div>
+          <div class="hero-petal" style="--delay:1.5s;--left:15%;--dur:8s;--size:1.3;"></div>
+          <div class="hero-petal" style="--delay:3s;--left:28%;--dur:12s;--size:0.8;"></div>
+          <div class="hero-petal" style="--delay:0.5s;--left:42%;--dur:9s;--size:1.1;"></div>
+          <div class="hero-petal" style="--delay:2s;--left:55%;--dur:11s;--size:0.9;"></div>
+          <div class="hero-petal" style="--delay:4s;--left:68%;--dur:8s;--size:1.2;"></div>
+          <div class="hero-petal" style="--delay:1s;--left:78%;--dur:10s;--size:0.7;"></div>
+          <div class="hero-petal" style="--delay:3.5s;--left:88%;--dur:9s;--size:1.0;"></div>
+          <div class="hero-petal" style="--delay:2.5s;--left:95%;--dur:11s;--size:1.1;"></div>
+        </div>
+        <div class="deco-circle circle-1"></div>
+        <div class="deco-circle circle-2"></div>
+        <div class="deco-circle circle-3"></div>
+        <div class="mini-gear gear-1">⚙️</div>
+        <div class="mini-gear gear-2">⚙️</div>
+        <div class="mini-gear gear-3">⚙️</div>
+      </div>
+      <div class="hero-content">
+        <div class="congrats-top" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
+          <span class="congrats-emoji">🎓</span>
+          <h2 class="congrats-label">Congratulations</h2>
+        </div>
+        <div class="hero-photo-wrapper" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="600">
+          <div class="photo-glow"></div>
+          <div class="photo-frame">
+            <div class="photo-shine"></div>
+            <img src="images/her-photo.jpg" alt="Semsema" class="hero-photo" onerror="this.style.display='none';this.parentElement.querySelector('.photo-placeholder').style.display='flex';"/>
+            <div class="photo-placeholder"><span>📷</span><p>Her Photo Here</p></div>
+            <div class="frame-lily frame-lily-top">🌸</div>
+            <div class="frame-lily frame-lily-bottom">🌸</div>
+          </div>
+        </div>
+        <div class="hero-name-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+          <h1 class="hero-name">Semsema</h1>
+          <div class="name-underline"></div>
+        </div>
+        <div class="hero-degree" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1300">
+          <p class="degree-text"><span class="degree-icon">🔧</span>Mechatronics Engineer<span class="degree-icon">⚙️</span></p>
+        </div>
+        <div class="hero-achievement" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1600">
+          <div class="achievement-badge"><span class="badge-star">⭐</span><p class="badge-text">Graduated with Excellence</p><span class="badge-star">⭐</span></div>
+        </div>
+        <div class="hero-quote" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1900">
+          <p class="quote-text">"From little dreams to building the future —<br/>you made it, and this is just the beginning."</p>
+        </div>
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-duration="800" data-aos-delay="2500">
+          <p class="scroll-text">Scroll down to see your journey</p>
+          <div class="scroll-arrow"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TIMELINE SECTION -->
+    <section id="timeline-section">
+      <div class="timeline-header" data-aos="fade-up">
+        <div class="section-divider"><span class="divider-line"></span><span class="divider-icon">🌸</span><span class="divider-line"></span></div>
+        <h2 class="timeline-title">Your Beautiful Journey</h2>
+        <p class="timeline-subtitle">Every moment made you who you are today</p>
+      </div>
+      <div class="timeline-line"></div>
+
+      <!-- MEMORY 1 -->
+      <div class="memory-card layout-left-right">
+        <div class="memory-connector"><div class="connector-dot"></div></div>
+        <div class="memory-photo-side" data-aos="fade-right" data-aos-duration="1000">
+          <div class="memory-photo-frame frame-style-1"><div class="memory-photo-shine"></div><img src="images/1.jpg" alt="Memory 1" class="memory-photo" onerror="this.style.display='none';this.parentElement.querySelector('.memory-placeholder').style.display='flex';"/><div class="memory-placeholder"><span>📷</span><p>Photo 1</p></div><div class="frame-deco deco-lily-1">🌸</div></div>
+        </div>
+        <div class="memory-text-side" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+          <div class="memory-text-card glass-card"><div class="memory-location"><span class="location-icon">📍</span><span class="location-name">TIDI Garden</span></div><p class="memory-caption">It was your final days maybe you were enjoying ur time in the garden</p><div class="memory-deco-flower">🌺</div></div>
+        </div>
+      </div>
+
+      <!-- MEMORY 2 -->
+      <div class="memory-card layout-right-left">
+        <div class="memory-connector"><div class="connector-dot"></div></div>
+        <div class="memory-text-side" data-aos="fade-right" data-aos-duration="1000">
+          <div class="memory-text-card glass-card"><div class="memory-location"><span class="location-icon">📍</span><span class="location-name">TIDI Garden</span></div><p class="memory-caption">A beautiful engineer there! With her secret weapon "T Shape Ruler"</p><div class="memory-deco-flower">🌷</div></div>
+        </div>
+        <div class="memory-photo-side" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+          <div class="memory-photo-frame frame-style-2"><div class="memory-photo-shine"></div><img src="images/2.jpg" alt="Memory 2" class="memory-photo" onerror="this.style.display='none';this.parentElement.querySelector('.memory-placeholder').style.display='flex';"/><div class="memory-placeholder"><span>📷</span><p>Photo 2</p></div><div class="frame-deco deco-gear-1">⚙️</div></div>
+        </div>
+      </div>
+
+      <!-- MEMORY 3 -->
+      <div class="memory-card layout-center-split">
+        <div class="memory-connector"><div class="connector-dot"></div></div>
+        <div class="center-split-left" data-aos="fade-right" data-aos-duration="1000">
+          <div class="split-text-card glass-card"><p class="split-text">A rainy weather photo here...</p></div>
+        </div>
+        <div class="center-split-photo" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200">
+          <div class="memory-photo-frame frame-style-3"><div class="memory-photo-shine"></div><img src="images/3.jpg" alt="Memory 3" class="memory-photo" onerror="this.style.display='none';this.parentElement.querySelector('.memory-placeholder').style.display='flex';"/><div class="memory-placeholder"><span>📷</span><p>Photo 3</p></div><div class="frame-deco deco-lily-2">🌸</div><div class="frame-deco deco-lily-3">🌸</div></div>
+          <div class="memory-location center-location"><span class="location-icon">📍</span><span class="location-name">Cluster Gate</span></div>
+        </div>
+        <div class="center-split-right" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+          <div class="split-text-card glass-card"><p class="split-text">...it is your favorite weather ever!</p><div class="memory-deco-flower">💐</div></div>
+        </div>
+      </div>
+
+      <!-- MEMORY 4 -->
+      <div class="memory-card layout-cinematic">
+        <div class="memory-connector"><div class="connector-dot"></div></div>
+        <div class="cinematic-wrapper" data-aos="fade-up" data-aos-duration="1200">
+          <div class="cinematic-photo-frame"><div class="memory-photo-shine"></div><img src="images/4.jpg" alt="Memory 4" class="memory-photo" onerror="this.style.display='none';this.parentElement.querySelector('.memory-placeholder').style.display='flex';"/><div class="memory-placeholder"><span>📷</span><p>Photo 4</p></div></div>
+          <div class="cinematic-overlay"><div class="cinematic-content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><div class="memory-location cinematic-location"><span class="location-icon">📍</span><span class="location-name">Factory 999</span></div><p class="cinematic-caption">Your summer training you were struggling of the sun in the factory for sure "Ayam El gahilya", but u have the Eng Helmet!</p><div class="cinematic-deco"><span>🌸</span><span>⚙️</span><span>🌸</span></div></div></div>
+        </div>
+      </div>
+
+      <!-- MEMORY 5 -->
+      <div class="memory-card layout-diagonal">
+        <div class="memory-connector"><div class="connector-dot"></div></div>
+        <div class="diagonal-wrapper">
+          <div class="diagonal-photo-side" data-aos="fade-up-right" data-aos-duration="1200">
+            <div class="memory-photo-frame frame-style-5"><div class="memory-photo-shine"></div><img src="images/5.jpg" alt="Memory 5" class="memory-photo" onerror="this.style.display='none';this.parentElement.querySelector('.memory-placeholder').style.display='flex';"/><div class="memory-placeholder"><span>📷</span><p>Photo 5</p></div><div class="frame-deco deco-lily-4">🌸</div><div class="frame-deco deco-gear-2">⚙️</div></div>
+          </div>
+          <div class="diagonal-text-side" data-aos="fade-up-left" data-aos-duration="1200" data-aos-delay="300">
+            <div class="diagonal-text-card glass-card"><div class="memory-location"><span class="location-icon">📍 NREA Egypt</span><span class="location-name">Location Name</span></div><p class="memory-caption">A beautiful engineer with the engineers costume, A wonderful training to start with in the last year "It was the start of almost everything :)" </p><div class="diagonal-quote-mark">"</div><div class="memory-deco-flower">🌺</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-bottom-divider" data-aos="fade-up">
+        <div class="section-divider"><span class="divider-line"></span><span class="divider-icon">💖</span><span class="divider-line"></span></div>
+      </div>
+    </section>
+
+
+    <!-- STUDY SECTION -->
+    <section id="study-section">
+      <div class="study-bg-elements">
+        <div class="floating-emoji study-emoji" style="--left:5%;--top:10%;--delay:0s;--dur:6s;">📖</div>
+        <div class="floating-emoji study-emoji" style="--left:90%;--top:15%;--delay:1s;--dur:7s;">📝</div>
+        <div class="floating-emoji study-emoji" style="--left:15%;--top:70%;--delay:2s;--dur:5s;">📐</div>
+        <div class="floating-emoji study-emoji" style="--left:85%;--top:75%;--delay:0.5s;--dur:8s;">📏</div>
+        <div class="floating-emoji study-emoji" style="--left:50%;--top:5%;--delay:1.5s;--dur:6s;">✏️</div>
+        <div class="floating-emoji study-emoji" style="--left:30%;--top:85%;--delay:3s;--dur:7s;">📚</div>
+        <div class="floating-emoji study-emoji" style="--left:70%;--top:90%;--delay:2.5s;--dur:5s;">🔬</div>
+        <div class="floating-emoji study-emoji" style="--left:40%;--top:20%;--delay:1.8s;--dur:6s;">⚙️</div>
+      </div>
+      <div class="special-section-header" data-aos="fade-up">
+        <div class="section-divider"><span class="divider-line"></span><span class="divider-icon">📚</span><span class="divider-line"></span></div>
+        <h2 class="special-section-title study-title">The Hardworking Scholar</h2>
+        <p class="special-section-subtitle">Late nights, endless notes, and the dedication that brought you here</p>
+      </div>
+      <div class="popup-photos-container">
+        <div class="popup-photo-card popup-card-1" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="200">
+          <div class="popup-frame study-frame"><div class="popup-photo-shine"></div><img src="images/study-1.jpg" alt="Study 1" class="popup-photo" onerror="this.style.display='none';this.parentElement.querySelector('.popup-placeholder').style.display='flex';"/><div class="popup-placeholder"><span>📖</span><p>Study 1</p></div></div><div class="popup-pin study-pin">📌</div>
+        </div>
+        <div class="popup-photo-card popup-card-2" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="500">
+          <div class="popup-frame study-frame"><div class="popup-photo-shine"></div><img src="images/study-2.jpg" alt="Study 2" class="popup-photo" onerror="this.style.display='none';this.parentElement.querySelector('.popup-placeholder').style.display='flex';"/><div class="popup-placeholder"><span>📝</span><p>Study 2</p></div></div><div class="popup-pin study-pin">📌</div>
+        </div>
+        <div class="popup-photo-card popup-card-3" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="800">
+          <div class="popup-frame study-frame"><div class="popup-photo-shine"></div><img src="images/study-3.jpg" alt="Study 3" class="popup-photo" onerror="this.style.display='none';this.parentElement.querySelector('.popup-placeholder').style.display='flex';"/><div class="popup-placeholder"><span>📐</span><p>Study 3</p></div></div><div class="popup-pin study-pin">📌</div>
+        </div>
+      </div>
+      <div class="popup-quote" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+        <div class="popup-quote-card glass-card"><p class="popup-quote-text">"Behind every success were countless pages of notes,<br/>late-night studying, and a heart that never gave up."</p><div class="popup-quote-emoji">✨📚✨</div></div>
+      </div>
+    </section>
+
+
+    <!-- ART SECTION -->
+    <section id="art-section">
+      <div class="art-bg-elements">
+        <div class="floating-emoji art-emoji" style="--left:8%;--top:12%;--delay:0s;--dur:7s;">🎨</div>
+        <div class="floating-emoji art-emoji" style="--left:88%;--top:18%;--delay:1s;--dur:6s;">🖌️</div>
+        <div class="floating-emoji art-emoji" style="--left:12%;--top:65%;--delay:2s;--dur:8s;">✏️</div>
+        <div class="floating-emoji art-emoji" style="--left:82%;--top:72%;--delay:0.5s;--dur:5s;">🖍️</div>
+        <div class="floating-emoji art-emoji" style="--left:45%;--top:8%;--delay:1.5s;--dur:7s;">🎭</div>
+        <div class="floating-emoji art-emoji" style="--left:25%;--top:80%;--delay:3s;--dur:6s;">✨</div>
+        <div class="floating-emoji art-emoji" style="--left:65%;--top:88%;--delay:2.5s;--dur:8s;">🖼️</div>
+        <div class="floating-emoji art-emoji" style="--left:35%;--top:25%;--delay:1.8s;--dur:5s;">💫</div>
+        <div class="paint-splatter splatter-1"></div>
+        <div class="paint-splatter splatter-2"></div>
+        <div class="paint-splatter splatter-3"></div>
+        <svg class="pencil-deco pencil-deco-1" viewBox="0 0 200 100" fill="none"><path d="M10 80 Q50 10,100 50 T190 20" stroke="rgba(249,180,199,0.2)" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="pencil-deco pencil-deco-2" viewBox="0 0 200 100" fill="none"><path d="M10 20 Q60 90,110 40 T190 80" stroke="rgba(255,159,104,0.15)" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="special-section-header" data-aos="fade-up">
+        <div class="section-divider"><span class="divider-line"></span><span class="divider-icon">🎨</span><span class="divider-line"></span></div>
+        <h2 class="special-section-title art-title">The Hidden Artist</h2>
+        <p class="special-section-subtitle">An engineer with the soul of an artist — your sketches tell stories words can't</p>
+      </div>
+      <div class="popup-photos-container art-photos-container">
+        <div class="popup-photo-card popup-card-1" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="200">
+          <div class="popup-frame art-frame"><div class="popup-photo-shine"></div><div class="notebook-edge"></div><img src="images/art-1.jpg" alt="Art 1" class="popup-photo" onerror="this.style.display='none';this.parentElement.querySelector('.popup-placeholder').style.display='flex';"/><div class="popup-placeholder art-placeholder"><span>🎨</span><p>Drawing 1</p></div></div><div class="popup-pin art-pin">🖌️</div>
+        </div>
+        <div class="popup-photo-card popup-card-2" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="500">
+          <div class="popup-frame art-frame"><div class="popup-photo-shine"></div><div class="notebook-edge"></div><img src="images/art-2.jpg" alt="Art 2" class="popup-photo" onerror="this.style.display='none';this.parentElement.querySelector('.popup-placeholder').style.display='flex';"/><div class="popup-placeholder art-placeholder"><span>✏️</span><p>Drawing 2</p></div></div><div class="popup-pin art-pin">🎨</div>
+        </div>
+        <div class="popup-photo-card popup-card-3" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="800">
+          <div class="popup-frame art-frame"><div class="popup-photo-shine"></div><div class="notebook-edge"></div><img src="images/art-3.jpg" alt="Art 3" class="popup-photo" onerror="this.style.display='none';this.parentElement.querySelector('.popup-placeholder').style.display='flex';"/><div class="popup-placeholder art-placeholder"><span>🖍️</span><p>Drawing 3</p></div></div><div class="popup-pin art-pin">✏️</div>
+        </div>
+      </div>
+      <div class="popup-quote" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+        <div class="popup-quote-card glass-card art-quote-card"><p class="popup-quote-text">"Not just an engineer who builds machines —<br/>but an artist who gives life to imagination."</p><div class="popup-quote-emoji">🎨✨🖌️</div></div>
+      </div>
+    </section>
+
+
+    <!-- FLOWERS SECTION -->
+    <section id="flowers-section">
+      <div class="flowers-bg-elements">
+        <div class="floating-emoji flower-emoji" style="--left:3%;--top:8%;--delay:0s;--dur:8s;">🌸</div>
+        <div class="floating-emoji flower-emoji" style="--left:92%;--top:12%;--delay:1s;--dur:7s;">🌺</div>
+        <div class="floating-emoji flower-emoji" style="--left:8%;--top:45%;--delay:2s;--dur:9s;">🌷</div>
+        <div class="floating-emoji flower-emoji" style="--left:88%;--top:50%;--delay:0.5s;--dur:6s;">💐</div>
+        <div class="floating-emoji flower-emoji" style="--left:20%;--top:80%;--delay:3s;--dur:8s;">🌹</div>
+        <div class="floating-emoji flower-emoji" style="--left:75%;--top:85%;--delay:1.5s;--dur:7s;">🌻</div>
+        <div class="floating-emoji flower-emoji" style="--left:50%;--top:3%;--delay:2.5s;--dur:9s;">💮</div>
+        <div class="floating-emoji flower-emoji" style="--left:35%;--top:92%;--delay:0.8s;--dur:6s;">🏵️</div>
+        <div class="floating-emoji flower-emoji" style="--left:60%;--top:20%;--delay:1.2s;--dur:8s;">🌸</div>
+        <div class="floating-emoji flower-emoji" style="--left:15%;--top:30%;--delay:3.5s;--dur:7s;">🌺</div>
+        <div class="floating-emoji flower-emoji" style="--left:80%;--top:35%;--delay:2.8s;--dur:9s;">🌷</div>
+        <div class="floating-emoji flower-emoji" style="--left:45%;--top:65%;--delay:1.8s;--dur:6s;">💐</div>
+        <div class="flower-petal-rain">
+          <div class="flower-rain-petal" style="--delay:0s;--left:5%;--dur:10s;"></div>
+          <div class="flower-rain-petal" style="--delay:1s;--left:15%;--dur:8s;"></div>
+          <div class="flower-rain-petal" style="--delay:2s;--left:25%;--dur:12s;"></div>
+          <div class="flower-rain-petal" style="--delay:0.5s;--left:35%;--dur:9s;"></div>
+          <div class="flower-rain-petal" style="--delay:3s;--left:45%;--dur:11s;"></div>
+          <div class="flower-rain-petal" style="--delay:1.5s;--left:55%;--dur:8s;"></div>
+          <div class="flower-rain-petal" style="--delay:2.5s;--left:65%;--dur:10s;"></div>
+          <div class="flower-rain-petal" style="--delay:0.8s;--left:75%;--dur:9s;"></div>
+          <div class="flower-rain-petal" style="--delay:3.5s;--left:85%;--dur:11s;"></div>
+          <div class="flower-rain-petal" style="--delay:1.2s;--left:95%;--dur:8s;"></div>
+        </div>
+      </div>
+      <div class="special-section-header" data-aos="fade-up">
+        <div class="section-divider"><span class="divider-line"></span><span class="divider-icon">💐</span><span class="divider-line"></span></div>
+        <h2 class="special-section-title flowers-title">Moments of Sweetness</h2>
+        <p class="special-section-subtitle">The calm, the beauty, and the flowers that made you smile</p>
+      </div>
+      <div class="flowers-gallery-wrapper">
+        <div class="flowers-row flowers-row-top">
+          <div class="flower-photo" data-aos="fade-up-right" data-aos-duration="800" data-aos-delay="200">
+            <div class="flower-photo-frame"><img src="images/flower-1.jpg" alt="Flowers 1" class="flower-img" onerror="this.style.display='none';this.parentElement.querySelector('.flower-placeholder').style.display='flex';"/><div class="flower-placeholder"><span>🌸</span></div><div class="flower-frame-deco">🌺</div></div>
+          </div>
+          <div class="flower-photo" data-aos="fade-down" data-aos-duration="800" data-aos-delay="400">
+            <div class="flower-photo-frame"><img src="images/flower-2.jpg" alt="Flowers 2" class="flower-img" onerror="this.style.display='none';this.parentElement.querySelector('.flower-placeholder').style.display='flex';"/><div class="flower-placeholder"><span>🌷</span></div><div class="flower-frame-deco">🌸</div></div>
+          </div>
+          <div class="flower-photo" data-aos="fade-up-left" data-aos-duration="800" data-aos-delay="300">
+            <div class="flower-photo-frame"><img src="images/flower-3.jpg" alt="Flowers 3" class="flower-img" onerror="this.style.display='none';this.parentElement.querySelector('.flower-placeholder').style.display='flex';"/><div class="flower-placeholder"><span>💐</span></div><div class="flower-frame-deco">🌷</div></div>
+          </div>
+        </div>
+        <div class="flowers-center-quote" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="600">
+          <div class="flowers-quote-card">
+            <div class="flowers-quote-glow"></div>
+            <p class="flowers-quote-text">"In every flower I gave you,<br/>there was a word I couldn't say —<br/>you deserve all the beauty<br/>this world has to offer."</p>
+            <div class="flowers-quote-petals"><span>🌸</span><span>💕</span><span>🌸</span></div>
+          </div>
+        </div>
+        <div class="flowers-row flowers-row-bottom">
+          <div class="flower-photo" data-aos="fade-up-right" data-aos-duration="800" data-aos-delay="800">
+            <div class="flower-photo-frame"><img src="images/flower-4.jpg" alt="Flowers 4" class="flower-img" onerror="this.style.display='none';this.parentElement.querySelector('.flower-placeholder').style.display='flex';"/><div class="flower-placeholder"><span>🌹</span></div><div class="flower-frame-deco">💐</div></div>
+          </div>
+          <div class="flower-photo" data-aos="fade-up" data-aos-duration="800" data-aos-delay="900">
+            <div class="flower-photo-frame"><img src="images/flower-5.jpg" alt="Flowers 5" class="flower-img" onerror="this.style.display='none';this.parentElement.querySelector('.flower-placeholder').style.display='flex';"/><div class="flower-placeholder"><span>🌺</span></div><div class="flower-frame-deco">🌸</div></div>
+          </div>
+          <div class="flower-photo" data-aos="fade-up-left" data-aos-duration="800" data-aos-delay="1000">
+            <div class="flower-photo-frame"><img src="images/flower-6.jpg" alt="Flowers 6" class="flower-img" onerror="this.style.display='none';this.parentElement.querySelector('.flower-placeholder').style.display='flex';"/><div class="flower-placeholder"><span>💮</span></div><div class="flower-frame-deco">🌺</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="flowers-bottom" data-aos="fade-up">
+        <div class="section-divider"><span class="divider-line"></span><span class="divider-icon">🌸</span><span class="divider-line"></span></div>
+      </div>
+    </section>
+
+
+    <!-- EVENTS SECTION -->
+    <section id="events-section">
+      <div class="events-header" data-aos="fade-up">
+        <div class="section-divider"><span class="divider-line"></span><span class="divider-icon">🏆</span><span class="divider-line"></span></div>
+        <h2 class="events-main-title">Events & Achievements</h2>
+        <p class="events-main-subtitle">Where passion meets action — the moments that shaped an engineer</p>
+      </div>
+
+      <!-- EVENT 1: AI SEMINAR -->
+      <div class="event-block event-ai-seminar">
+        <div class="event-bg-particles">
+          <div class="floating-emoji" style="--left:5%;--top:15%;--delay:0s;--dur:6s;">🤖</div>
+          <div class="floating-emoji" style="--left:90%;--top:20%;--delay:1s;--dur:7s;">🧠</div>
+          <div class="floating-emoji" style="--left:15%;--top:75%;--delay:2s;--dur:5s;">💡</div>
+          <div class="floating-emoji" style="--left:85%;--top:80%;--delay:0.5s;--dur:8s;">⚡</div>
+          <div class="floating-emoji" style="--left:50%;--top:5%;--delay:1.5s;--dur:6s;">📊</div>
+        </div>
+        <div class="event-title-wrapper" data-aos="fade-up" data-aos-duration="1000">
+          <div class="event-badge ai-badge"><span class="event-badge-icon">🤖</span><div class="event-badge-text"><h3 class="event-name">AI Seminar</h3><p class="event-tagline">Where Artificial Intelligence met a brilliant mind</p></div></div>
+        </div>
+        <div class="event-single-layout">
+          <div class="event-single-photo" data-aos="fade-right" data-aos-duration="1200">
+            <div class="event-photo-frame ai-frame"><div class="event-photo-shine"></div><img src="images/ai-seminar.jpg" alt="AI Seminar" class="event-photo" onerror="this.style.display='none';this.parentElement.querySelector('.event-placeholder').style.display='flex';"/><div class="event-placeholder"><span>🤖</span><p>AI Seminar</p></div><div class="ai-photo-glow"></div></div>
+          </div>
+          <div class="event-single-text" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
+            <div class="event-text-card ai-text-card"><div class="event-text-deco-line"></div><p class="event-quote">"The moment you sat there in the audience,<br/>curious and focused — I knew you were someone<br/>who never stops learning.<br/><br/>That seminar wasn't just about AI —<br/>it was the start of something special."</p><div class="event-text-footer"><span>🤖</span><span>💡</span><span>⚡</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVENT 2: MACTECH EXPO -->
+      <div class="event-block event-mactech">
+        <div class="event-bg-particles">
+          <div class="floating-emoji" style="--left:8%;--top:10%;--delay:0s;--dur:7s;">🔧</div>
+          <div class="floating-emoji" style="--left:92%;--top:15%;--delay:1.5s;--dur:6s;">⚙️</div>
+          <div class="floating-emoji" style="--left:20%;--top:80%;--delay:2s;--dur:8s;">🖨️</div>
+          <div class="floating-emoji" style="--left:80%;--top:85%;--delay:0.5s;--dur:5s;">🔩</div>
+          <div class="floating-emoji" style="--left:45%;--top:8%;--delay:3s;--dur:7s;">🏭</div>
+        </div>
+        <div class="event-title-wrapper" data-aos="fade-up" data-aos-duration="1000">
+          <div class="event-badge mactech-badge"><span class="event-badge-icon">🔧</span><div class="event-badge-text"><h3 class="event-name">MacTech EXPO</h3><p class="event-tagline">3D Printers, CNC Machines & Mechanical Wonders</p></div></div>
+        </div>
+        <div class="event-triple-layout">
+          <div class="event-triple-photos">
+            <div class="event-triple-photo" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="200">
+              <div class="event-photo-frame mactech-frame"><div class="event-photo-shine"></div><img src="images/mactech-1.jpg" alt="MacTech 1" class="event-photo" onerror="this.style.display='none';this.parentElement.querySelector('.event-placeholder').style.display='flex';"/><div class="event-placeholder"><span>🖨️</span><p>MacTech 1</p></div></div>
+            </div>
+            <div class="event-triple-photo" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="400">
+              <div class="event-photo-frame mactech-frame mactech-frame-main"><div class="event-photo-shine"></div><img src="images/mactech-2.jpg" alt="MacTech 2" class="event-photo" onerror="this.style.display='none';this.parentElement.querySelector('.event-placeholder').style.display='flex';"/><div class="event-placeholder"><span>⚙️</span><p>MacTech 2</p></div></div>
+            </div>
+            <div class="event-triple-photo" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="600">
+              <div class="event-photo-frame mactech-frame"><div class="event-photo-shine"></div><img src="images/mactech-3.jpg" alt="MacTech 3" class="event-photo" onerror="this.style.display='none';this.parentElement.querySelector('.event-placeholder').style.display='flex';"/><div class="event-placeholder"><span>🔧</span><p>MacTech 3</p></div></div>
+            </div>
+          </div>
+          <div class="event-below-quote" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+            <div class="event-quote-card glass-card mactech-quote-card"><p class="event-quote">"Watching you explore every machine with those curious eyes —<br/>this is where the engineer in you truly came alive."</p><div class="event-text-footer"><span>🔧</span><span>⚙️</span><span>🖨️</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVENT 3: CAIRO GENIUSES -->
+      <div class="event-block event-cairo-geniuses">
+        <div class="event-bg-particles">
+          <div class="floating-emoji" style="--left:5%;--top:12%;--delay:0s;--dur:6s;">🏛️</div>
+          <div class="floating-emoji" style="--left:90%;--top:18%;--delay:1s;--dur:7s;">🏗️</div>
+          <div class="floating-emoji" style="--left:15%;--top:70%;--delay:2s;--dur:5s;">🤖</div>
+          <div class="floating-emoji" style="--left:85%;--top:75%;--delay:0.5s;--dur:8s;">📐</div>
+          <div class="floating-emoji" style="--left:50%;--top:5%;--delay:1.5s;--dur:6s;">💡</div>
+          <div class="floating-emoji" style="--left:30%;--top:85%;--delay:3s;--dur:7s;">🏠</div>
+        </div>
+        <div class="event-title-wrapper" data-aos="fade-up" data-aos-duration="1000">
+          <div class="event-badge cairo-badge"><span class="event-badge-icon">🏛️</span><div class="event-badge-text"><h3 class="event-name">Cairo Geniuses Forum</h3><p class="event-tagline">Mechatronics Projects & Architectural Innovation</p></div></div>
+        </div>
+        <div class="event-quad-layout">
+          <div class="event-quad-grid">
+            <div class="event-quad-photo quad-1" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200"><div class="event-photo-frame cairo-frame"><div class="event-photo-shine"></div><img src="images/cairo-1.jpg" alt="Cairo 1" class="event-photo" onerror="this.style.display='none';this.parentElement.querySelector('.event-placeholder').style.display='flex';"/><div class="event-placeholder"><span>🏛️</span><p>Cairo 1</p></div></div></div>
+            <div class="event-quad-photo quad-2" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400"><div class="event-photo-frame cairo-frame"><div class="event-photo-shine"></div><img src="images/cairo-2.jpg" alt="Cairo 2" class="event-photo" onerror="this.style.display='none';this.parentElement.querySelector('.event-placeholder').style.display='flex';"/><div class="event-placeholder"><span>🤖</span><p>Cairo 2</p></div></div></div>
+            <div class="event-quad-photo quad-3" data-aos="fade-right" data-aos-duration="800" data-aos-delay="600"><div class="event-photo-frame cairo-frame"><div class="event-photo-shine"></div><img src="images/cairo-3.jpg" alt="Cairo 3" class="event-photo" onerror="this.style.display='none';this.parentElement.querySelector('.event-placeholder').style.display='flex';"/><div class="event-placeholder"><span>📐</span><p>Cairo 3</p></div></div></div>
+            <div class="event-quad-photo quad-4" data-aos="fade-left" data-aos-duration="800" data-aos-delay="800"><div class="event-photo-frame cairo-frame"><div class="event-photo-shine"></div><img src="images/cairo-4.jpg" alt="Cairo 4" class="event-photo" onerror="this.style.display='none';this.parentElement.querySelector('.event-placeholder').style.display='flex';"/><div class="event-placeholder"><span>🏗️</span><p>Cairo 4</p></div></div></div>
+          </div>
+          <div class="event-quad-quote" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1000">
+            <div class="cairo-quote-card"><p class="event-quote">"Among all the geniuses in that forum,<br/>you stood out — not just for what you built,<br/>but for the passion behind every project."</p><div class="event-text-footer"><span>🏛️</span><span>⚙️</span><span>🏗️</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVENT 4: EDUTECH -->
+      <div class="event-block event-edutech">
+        <div class="event-bg-particles">
+          <div class="floating-emoji" style="--left:3%;--top:10%;--delay:0s;--dur:7s;">🎓</div>
+          <div class="floating-emoji" style="--left:95%;--top:15%;--delay:1s;--dur:6s;">💻</div>
+          <div class="floating-emoji" style="--left:10%;--top:65%;--delay:2s;--dur:8s;">📱</div>
+          <div class="floating-emoji" style="--left:88%;--top:70%;--delay:0.5s;--dur:5s;">🔬</div>
+          <div class="floating-emoji" style="--left:50%;--top:3%;--delay:1.5s;--dur:7s;">🚀</div>
+          <div class="floating-emoji" style="--left:25%;--top:85%;--delay:3s;--dur:6s;">💡</div>
+          <div class="floating-emoji" style="--left:75%;--top:88%;--delay:2.5s;--dur:8s;">⭐</div>
+        </div>
+        <div class="event-title-wrapper" data-aos="fade-up" data-aos-duration="1000">
+          <div class="event-badge edutech-badge"><span class="event-badge-icon">🚀</span><div class="event-badge-text"><h3 class="event-name">EduTech</h3><p class="event-tagline">Projects, Education & Building the Future</p></div></div>
+        </div>
+        <div class="event-showcase-layout">
+          <div class="showcase-main" data-aos="zoom-in" data-aos-duration="1200">
+            <div class="showcase-main-frame"><div class="event-photo-shine"></div><img src="images/edutech-1.jpg" alt="EduTech 1" class="event-photo" onerror="this.style.display='none';this.parentElement.querySelector('.event-placeholder').style.display='flex';"/><div class="event-placeholder"><span>🚀</span><p>EduTech Main</p></div><div class="showcase-main-overlay"><span class="showcase-label">⭐ Highlight Moment</span></div></div>
+          </div>
+          <div class="showcase-grid">
+            <div class="showcase-item" data-aos="fade-up-right" data-aos-duration="800" data-aos-delay="300"><div class="event-photo-frame edutech-frame"><div class="event-photo-shine"></div><img src="images/edutech-2.jpg" alt="EduTech 2" class="event-photo" onerror="this.style.display='none';this.parentElement.querySelector('.event-placeholder').style.display='flex';"/><div class="event-placeholder"><span>💻</span><p>EduTech 2</p></div></div></div>
+            <div class="showcase-item" data-aos="fade-up-left" data-aos-duration="800" data-aos-delay="500"><div class="event-photo-frame edutech-frame"><div class="event-photo-shine"></div><img src="images/edutech-3.jpg" alt="EduTech 3" class="event-photo" onerror="this.style.display='none';this.parentElement.querySelector('.event-placeholder').style.display='flex';"/><div class="event-placeholder"><span>🔬</span><p>EduTech 3</p></div></div></div>
+            <div class="showcase-item" data-aos="fade-up-right" data-aos-duration="800" data-aos-delay="700"><div class="event-photo-frame edutech-frame"><div class="event-photo-shine"></div><img src="images/edutech-4.jpg" alt="EduTech 4" class="event-photo" onerror="this.style.display='none';this.parentElement.querySelector('.event-placeholder').style.display='flex';"/><div class="event-placeholder"><span>📱</span><p>EduTech 4</p></div></div></div>
+            <div class="showcase-item" data-aos="fade-up-left" data-aos-duration="800" data-aos-delay="900"><div class="event-photo-frame edutech-frame"><div class="event-photo-shine"></div><img src="images/edutech-5.jpg" alt="EduTech 5" class="event-photo" onerror="this.style.display='none';this.parentElement.querySelector('.event-placeholder').style.display='flex';"/><div class="event-placeholder"><span>🎓</span><p>EduTech 5</p></div></div></div>
+          </div>
+          <div class="showcase-popup-quote" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="1100">
+            <div class="edutech-popup-card"><div class="popup-card-shine"></div><div class="edutech-popup-icon">🚀</div><p class="event-quote">"Education isn't just about learning —<br/>it's about creating, inspiring, and leading.<br/><br/>And you did all three."</p><div class="edutech-popup-stars"><span>✨</span><span>⭐</span><span>✨</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="events-bottom-divider" data-aos="fade-up">
+        <div class="section-divider"><span class="divider-line"></span><span class="divider-icon">✨</span><span class="divider-line"></span></div>
+        <p class="events-continue-text">The best is yet to come...</p>
+      </div>
+    </section>
+
+
+    <!-- MINI GAME SECTION -->
+    <section id="game-section">
+      <div class="game-bg-elements">
+        <div class="floating-emoji" style="--left:5%;--top:10%;--delay:0s;--dur:6s;">🤖</div>
+        <div class="floating-emoji" style="--left:90%;--top:15%;--delay:1s;--dur:7s;">⚙️</div>
+        <div class="floating-emoji" style="--left:15%;--top:70%;--delay:2s;--dur:5s;">🔧</div>
+        <div class="floating-emoji" style="--left:85%;--top:75%;--delay:0.5s;--dur:8s;">🔩</div>
+        <div class="floating-emoji" style="--left:50%;--top:5%;--delay:1.5s;--dur:6s;">💡</div>
+        <div class="floating-emoji" style="--left:30%;--top:85%;--delay:3s;--dur:7s;">🔋</div>
+        <div class="floating-emoji" style="--left:70%;--top:88%;--delay:2.5s;--dur:5s;">📟</div>
+      </div>
+      <div class="special-section-header" data-aos="fade-up">
+        <div class="section-divider"><span class="divider-line"></span><span class="divider-icon">🎮</span><span class="divider-line"></span></div>
+        <h2 class="special-section-title game-title">Time For Some Fun!</h2>
+        <p class="special-section-subtitle">Build Semsema's Robot by catching the right components</p>
+      </div>
+      <div class="game-container" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="game-screen" id="game-start-screen">
+          <div class="game-card glass-card">
+            <div class="game-robot-preview">🤖</div>
+            <h3 class="game-card-title">Build The Robot!</h3>
+            <p class="game-card-desc">Catch falling components to build Semsema's robot.<br/>Use <strong>← →</strong> arrow keys or <strong>touch</strong> to move.<br/>Collect <strong>10 parts</strong> to complete the build!</p>
+            <div class="game-components-preview"><span>⚙️</span><span>🔋</span><span>🔧</span><span>📟</span><span>💡</span></div>
+            <button class="game-start-btn" id="game-start-btn"><span class="btn-shine"></span><span class="btn-text">🚀 Start Building!</span></button>
+          </div>
+        </div>
+        <div class="game-screen hidden" id="game-play-screen">
+          <div class="game-hud">
+            <div class="hud-item"><span class="hud-label">Parts</span><span class="hud-value" id="game-score">0</span><span class="hud-total">/ 10</span></div>
+            <div class="hud-item"><span class="hud-label">Time</span><span class="hud-value" id="game-timer">30</span><span class="hud-total">s</span></div>
+            <div class="hud-progress"><div class="hud-progress-bar" id="game-progress-bar"></div></div>
+          </div>
+          <div class="game-arena" id="game-arena"><div class="game-catcher" id="game-catcher"><span>🤖</span></div></div>
+        </div>
+        <div class="game-screen hidden" id="game-win-screen">
+          <div class="game-card glass-card game-win-card">
+            <div class="game-win-robot">🤖</div>
+            <div class="game-win-sparkles">✨⭐✨</div>
+            <h3 class="game-card-title game-win-title">Robot Complete!</h3>
+            <p class="game-win-message">🎉 Mission Accomplished! 🎉<br/><br/><strong>Engineer Semsema</strong> has successfully<br/>built her robot and is ready to<br/>change the world!</p>
+            <div class="game-win-badge"><span>🏆</span><span>Certified Robot Builder</span><span>🏆</span></div>
+            <button class="game-continue-btn" id="game-continue-btn"><span class="btn-shine"></span><span class="btn-text">Continue The Journey ✨</span></button>
+          </div>
+        </div>
+        <div class="game-screen hidden" id="game-over-screen">
+          <div class="game-card glass-card">
+            <div class="game-robot-preview">🤖💫</div>
+            <h3 class="game-card-title">Almost There!</h3>
+            <p class="game-card-desc">The robot needs more parts!<br/>You collected <strong id="game-final-score">0</strong> out of 10.<br/>Try again?</p>
+            <button class="game-start-btn" id="game-retry-btn"><span class="btn-shine"></span><span class="btn-text">🔄 Try Again!</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- GRADUATION DAY SECTION -->
+    <section id="graduation-section">
+      <div class="grad-bg-elements">
+        <div class="grad-sparkles" id="grad-sparkles"></div>
+        <div class="floating-emoji grad-emoji" style="--left:5%;--top:8%;--delay:0s;--dur:8s;">🎓</div>
+        <div class="floating-emoji grad-emoji" style="--left:92%;--top:12%;--delay:1s;--dur:7s;">🎉</div>
+        <div class="floating-emoji grad-emoji" style="--left:10%;--top:45%;--delay:2s;--dur:9s;">⭐</div>
+        <div class="floating-emoji grad-emoji" style="--left:88%;--top:50%;--delay:0.5s;--dur:6s;">🌸</div>
+        <div class="floating-emoji grad-emoji" style="--left:20%;--top:80%;--delay:3s;--dur:8s;">🎊</div>
+        <div class="floating-emoji grad-emoji" style="--left:75%;--top:85%;--delay:1.5s;--dur:7s;">💐</div>
+        <div class="floating-emoji grad-emoji" style="--left:50%;--top:3%;--delay:2.5s;--dur:9s;">🏆</div>
+        <div class="floating-emoji grad-emoji" style="--left:35%;--top:92%;--delay:0.8s;--dur:6s;">🎓</div>
+        <div class="grad-confetti-container" id="grad-confetti"></div>
+      </div>
+      <div class="grad-header" data-aos="fade-up">
+        <div class="section-divider"><span class="divider-line"></span><span class="divider-icon">🎓</span><span class="divider-line"></span></div>
+        <h2 class="grad-title">The Last Day</h2>
+        <p class="grad-subtitle-text">Graduation Day — The day everything came together</p>
+      </div>
+      <div class="grad-highlights" data-aos="zoom-in" data-aos-duration="1200">
+        <div class="grad-highlights-card">
+          <div class="grad-highlights-shine"></div>
+          <div class="grad-highlights-badge">📅 Graduation Day</div>
+          <p class="grad-highlights-text">"The cap, the gown, the smile that said it all —<br/>years of hard work wrapped in one beautiful moment.<br/><br/>This wasn't just a graduation.<br/>This was proof that dreams come true."</p>
+          <div class="grad-highlights-icons"><span>🎓</span><span>⚙️</span><span>🌸</span><span>⚙️</span><span>🎓</span></div>
+        </div>
+      </div>
+      <div class="grad-gallery-big">
+        <div class="grad-big-photo" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="grad-big-frame"><div class="event-photo-shine"></div><img src="images/grad-1.jpg" alt="Graduation 1" class="grad-big-img" onerror="this.style.display='none';this.parentElement.querySelector('.grad-big-placeholder').style.display='flex';"/><div class="grad-big-placeholder"><span>🎓</span><p>Graduation 1</p></div><div class="grad-frame-lily grad-lily-1">🌸</div></div>
+        </div>
+        <div class="grad-big-photo grad-big-featured" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="400">
+          <div class="grad-big-frame grad-big-frame-featured"><div class="event-photo-shine"></div><img src="images/grad-2.jpg" alt="Graduation 2" class="grad-big-img" onerror="this.style.display='none';this.parentElement.querySelector('.grad-big-placeholder').style.display='flex';"/><div class="grad-big-placeholder"><span>🎓</span><p>Graduation 2</p></div><div class="grad-featured-star">⭐ The Moment ⭐</div><div class="grad-frame-lily grad-lily-2">🌸</div><div class="grad-frame-lily grad-lily-3">🌸</div></div>
+        </div>
+        <div class="grad-big-photo" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+          <div class="grad-big-frame"><div class="event-photo-shine"></div><img src="images/grad-3.jpg" alt="Graduation 3" class="grad-big-img" onerror="this.style.display='none';this.parentElement.querySelector('.grad-big-placeholder').style.display='flex';"/><div class="grad-big-placeholder"><span>🎓</span><p>Graduation 3</p></div><div class="grad-frame-lily grad-lily-4">🌸</div></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- GRAND FINALE -->
+    <section id="finale-section">
+      <div class="finale-bg">
+        <div class="finale-sparkles" id="finale-sparkles"></div>
+        <div class="finale-petals">
+          <div class="finale-petal" style="--delay:0s;--left:5%;--dur:10s;--size:1.2;"></div>
+          <div class="finale-petal" style="--delay:1s;--left:15%;--dur:8s;--size:0.8;"></div>
+          <div class="finale-petal" style="--delay:2s;--left:25%;--dur:12s;--size:1.0;"></div>
+          <div class="finale-petal" style="--delay:0.5s;--left:35%;--dur:9s;--size:1.3;"></div>
+          <div class="finale-petal" style="--delay:3s;--left:45%;--dur:11s;--size:0.9;"></div>
+          <div class="finale-petal" style="--delay:1.5s;--left:55%;--dur:8s;--size:1.1;"></div>
+          <div class="finale-petal" style="--delay:2.5s;--left:65%;--dur:10s;--size:0.7;"></div>
+          <div class="finale-petal" style="--delay:0.8s;--left:75%;--dur:9s;--size:1.2;"></div>
+          <div class="finale-petal" style="--delay:3.5s;--left:85%;--dur:11s;--size:1.0;"></div>
+          <div class="finale-petal" style="--delay:1.2s;--left:95%;--dur:8s;--size:0.8;"></div>
+        </div>
+        <div class="floating-emoji finale-emoji" style="--left:8%;--top:15%;--delay:0s;--dur:7s;">🌸</div>
+        <div class="floating-emoji finale-emoji" style="--left:90%;--top:20%;--delay:1s;--dur:6s;">⚙️</div>
+        <div class="floating-emoji finale-emoji" style="--left:15%;--top:60%;--delay:2s;--dur:8s;">🌸</div>
+        <div class="floating-emoji finale-emoji" style="--left:85%;--top:70%;--delay:0.5s;--dur:5s;">💖</div>
+        <div class="floating-emoji finale-emoji" style="--left:50%;--top:5%;--delay:1.5s;--dur:7s;">🎓</div>
+        <div class="floating-emoji finale-emoji" style="--left:30%;--top:85%;--delay:3s;--dur:6s;">🌸</div>
+      </div>
+      <div class="finale-content" data-aos="zoom-in" data-aos-duration="1500">
+        <div class="finale-card">
+          <div class="finale-card-shine"></div>
+          <div class="finale-card-glow"></div>
+          <div class="finale-end-label">— End of Journey —</div>
+          <div class="finale-lily">🌸</div>
+          <h2 class="finale-title">Congratulations,<br/>Engineer Semsema</h2>
+          <div class="finale-divider"><span></span><span>💖</span><span></span></div>
+          <p class="finale-message">
+            From the first day you stepped into university,<br/>
+            to the last day you walked out as an engineer —<br/>
+            every moment was proof of how amazing you are.<br/><br/>
+            You studied harder than anyone,<br/>
+            drew beauty that machines can't replicate,<br/>
+            and built things that make the world better.<br/><br/>
+            I'm so proud of you.<br/>
+            Not just for the degree,<br/>
+            but for the person you became along the way.<br/><br/>
+            This is not the end — it's the beginning<br/>
+            of an even more beautiful chapter.<br/><br/>
+            <strong>The world is lucky to have you,<br/>
+            Engineer Semsema. 💖</strong>
+          </p>
+          <div class="finale-flowers"><span>🌸</span><span>⚙️</span><span>🌸</span><span>💖</span><span>🌸</span><span>⚙️</span><span>🌸</span></div>
+          <div class="finale-signature">
+            <p>With all my heart,</p>
+            <p class="finale-sign-name">Forever proud of you ❤️</p>
+          </div>
+        </div>
+      </div>
+      <div class="finale-confetti-container" id="finale-confetti"></div>
+    </section>
+
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
